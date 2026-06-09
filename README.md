@@ -488,8 +488,17 @@ Created by **[Neshley](https://github.com/Neshley)**
 
 <div align="center">
 
+## 🌟 Connect & Explore
+
 **Made with ❤️ by Neshley**
 
 Star ⭐ if you find this project helpful!
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-neshleyportfolio.vercel.app-00D9FF?style=for-the-badge&logo=vercel)](https://neshleyportfolio.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Neshley-181717?style=for-the-badge&logo=github)](https://github.com/Neshley)
+
+---
+
+**Crafted with passion 🚀 | Always learning 📚 | Open to collaborations 🤝**
 
 </div>
