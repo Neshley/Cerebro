@@ -68,10 +68,10 @@ System Access (Files, Process, Web)
 - **Git**
 - **Ollama** (for offline mode) - [Download](https://ollama.ai)
 
-### 1. Clone Repository
+### 1. Clone Repository to Downloads
 ```bash
-git clone https://github.com/Neshley/cerebro.git
-cd cerebro
+git clone https://github.com/Neshley/cerebro.git ~/Downloads/cerebro
+cd ~/Downloads/cerebro
 ```
 
 ### 2. Backend Setup
@@ -107,21 +107,22 @@ npm install
 
 **Terminal 1 - Backend:**
 ```bash
-cd backend
+cd ~/Downloads/cerebro/backend
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 python app.py
 # Backend runs at http://localhost:5000
 ```
 
 **Terminal 2 - Frontend:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm start
 # Frontend runs at http://localhost:3000
 ```
 
 **Terminal 3 - Electron App (Optional):**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run electron
 # Desktop app launches
 ```
@@ -132,7 +133,7 @@ npm run electron
 
 ### Environment Variables
 
-Create `backend/.env`:
+Create `~/Downloads/cerebro/backend/.env`:
 
 ```env
 # AI Mode: 'online' or 'offline'
@@ -237,7 +238,7 @@ POST   /api/config/settings/ai-mode - Change AI mode
 ## 📁 Project Structure
 
 ```
-cerebro/
+~/Downloads/cerebro/
 ├── backend/                    # Python Flask Backend
 │   ├── app.py                 # Main application
 │   ├── requirements.txt       # Dependencies
@@ -258,7 +259,7 @@ cerebro/
 │   ├── package.json
 │   ├── electron.js
 │   ├── public/
-│   │   └── index.html
+���   │   └── index.html
 │   └── src/
 │       ├── App.jsx
 │       ├── index.js
@@ -279,14 +280,14 @@ cerebro/
 
 ### Backend Development
 ```bash
-cd backend
+cd ~/Downloads/cerebro/backend
 source venv/bin/activate
 python app.py
 ```
 
 ### Frontend Development
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm start
 # Hot reloads at http://localhost:3000
 ```
@@ -295,14 +296,14 @@ npm start
 
 **Build Frontend:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run build
 # Creates optimized build in build/
 ```
 
 **Build Electron App:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run dist
 # Creates distributable in dist/
 ```
