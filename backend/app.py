@@ -9,6 +9,7 @@ import os
 from dotenv import load_dotenv
 import logging
 
+
 # Load environment variables
 load_dotenv()
 
@@ -29,6 +30,22 @@ app.register_blueprint(system_routes.system_bp)
 app.register_blueprint(config_routes.config_bp)
 
 
+from flask import Flask
+from routes.ai_routes import ai_bp
+
+app = Flask(__name__)
+
+app.register_blueprint(ai_bp)
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
+@app.route('/')
+def home():
+    return jsonify({
+        "message": "Cerebro Backend Running",
+        "status": "online"
+    })
+    
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
