@@ -65,16 +65,28 @@ System Access (Files, Process, Web)
 ### Prerequisites
 - **Node.js** 16.x or higher
 - **Python** 3.9 or higher
-- **Git**
+- **Git** (for cloning) or **ZIP file** (for direct download)
 - **Ollama** (for offline mode) - [Download](https://ollama.ai)
 
-### 1. Clone Repository
+### Installation Options
+
+#### Option 1️⃣: Clone with Git (Recommended)
 ```bash
-git clone https://github.com/Neshley/cerebro.git
-cd cerebro
+git clone https://github.com/Neshley/cerebro.git ~/Downloads/cerebro
+cd ~/Downloads/cerebro
 ```
 
-### 2. Backend Setup
+#### Option 2️⃣: Download as ZIP
+[⬇️ Download Cerebro (ZIP)](https://github.com/Neshley/cerebro/archive/refs/heads/main.zip)
+
+After downloading:
+1. Extract the ZIP file to `~/Downloads/cerebro`
+2. Open terminal and navigate to the folder:
+   ```bash
+   cd ~/Downloads/cerebro
+   ```
+
+### Backend Setup
 ```bash
 cd backend
 
@@ -95,7 +107,7 @@ cp .env.example .env
 # Edit .env and add your API keys
 ```
 
-### 3. Frontend Setup
+### Frontend Setup
 ```bash
 cd ../frontend
 
@@ -103,25 +115,26 @@ cd ../frontend
 npm install
 ```
 
-### 4. Run Development Server
+### Run Development Server
 
 **Terminal 1 - Backend:**
 ```bash
-cd backend
+cd ~/Downloads/cerebro/backend
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 python app.py
 # Backend runs at http://localhost:5000
 ```
 
 **Terminal 2 - Frontend:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm start
 # Frontend runs at http://localhost:3000
 ```
 
 **Terminal 3 - Electron App (Optional):**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run electron
 # Desktop app launches
 ```
@@ -132,7 +145,7 @@ npm run electron
 
 ### Environment Variables
 
-Create `backend/.env`:
+Create `~/Downloads/cerebro/backend/.env`:
 
 ```env
 # AI Mode: 'online' or 'offline'
@@ -237,7 +250,7 @@ POST   /api/config/settings/ai-mode - Change AI mode
 ## 📁 Project Structure
 
 ```
-cerebro/
+~/Downloads/cerebro/
 ├── backend/                    # Python Flask Backend
 │   ├── app.py                 # Main application
 │   ├── requirements.txt       # Dependencies
@@ -279,14 +292,14 @@ cerebro/
 
 ### Backend Development
 ```bash
-cd backend
+cd ~/Downloads/cerebro/backend
 source venv/bin/activate
 python app.py
 ```
 
 ### Frontend Development
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm start
 # Hot reloads at http://localhost:3000
 ```
@@ -295,14 +308,14 @@ npm start
 
 **Build Frontend:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run build
 # Creates optimized build in build/
 ```
 
 **Build Electron App:**
 ```bash
-cd frontend
+cd ~/Downloads/cerebro/frontend
 npm run dist
 # Creates distributable in dist/
 ```
@@ -477,6 +490,7 @@ This project is licensed under the **Boost Software License 1.0** - see the [LIC
 - 📚 [Documentation](docs/)
 - 🐛 [Report Issues](https://github.com/Neshley/cerebro/issues)
 - ⭐ [Star on GitHub](https://github.com/Neshley/cerebro)
+- ⬇️ [Download as ZIP](https://github.com/Neshley/cerebro/archive/refs/heads/main.zip)
 
 ---
 
@@ -496,6 +510,7 @@ Star ⭐ if you find this project helpful!
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-neshleyportfolio.vercel.app-00D9FF?style=for-the-badge&logo=vercel)](https://neshleyportfolio.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Neshley-181717?style=for-the-badge&logo=github)](https://github.com/Neshley)
+[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=github)](https://github.com/Neshley/cerebro/archive/refs/heads/main.zip)
 
 ---
 
